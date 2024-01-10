@@ -10,17 +10,21 @@ from datetime import datetime as dt
 # Constantes
 DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
 
+
 def timestamp_to_date(timestamp):
     """Convertit un timestamp en date"""
     return dt.fromtimestamp(timestamp / 1000).strftime(DATE_FORMAT)
+
 
 def date_to_timestamp(date):
     """Convertit une date au format timestamp"""
     return int(dt.strptime(date, DATE_FORMAT).timestamp() * 1000)
 
+
 def get_now_timestamp():
     """Donne le timestamp actuel"""
     return int(dt.now().timestamp() * 1000)
+
 
 def main():
     """Fonction principal"""
@@ -55,6 +59,7 @@ def main():
         print(timestamp_to_date(args.timestamp))
     else:
         print(get_now_timestamp())
+
 
 # Mise en place du parser d'argument
 if __name__ == "__main__":

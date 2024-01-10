@@ -5,6 +5,7 @@ import sys
 import xml.dom.minidom as minidom
 import argparse
 
+
 def main():
     """Programme principal"""
     parser = argparse.ArgumentParser(
@@ -31,6 +32,7 @@ def main():
         print(xml.toprettyxml())
 
     sys.exit(return_code)
+
 
 if __name__ == "__main__":
     main()

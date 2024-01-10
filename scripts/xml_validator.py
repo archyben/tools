@@ -5,6 +5,7 @@ import sys
 from lxml import etree
 import argparse
 
+
 def main():
     """Programme principal"""
     parser = argparse.ArgumentParser(
@@ -44,6 +45,7 @@ def main():
             print("Fichier xml '{}' valide".format(xml_path))
 
     sys.exit(return_code)
+
 
 if __name__ == "__main__":
     main()
